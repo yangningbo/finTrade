@@ -1,0 +1,8 @@
+.container
+  .row
+    .col-md-12.col-sm-12
+      %h3 ACTIVITIES / NEWS / TEAM PROJECT
+      %h1 SMU ACTIVITIES REGISTRY
+      %hr/
+      %a.smoothScroll.btn.btn-danger{:name => "work"} What we do
+      %a.smoothScroll.btn.btn-default{:name => "contact"} Talk to us

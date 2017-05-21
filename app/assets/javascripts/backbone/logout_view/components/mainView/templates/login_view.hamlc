@@ -1,0 +1,24 @@
+.container
+  .row
+    .text-center
+      .section-title
+        %h1.heading.bold Log In
+        %hr/
+    .login-info
+      %form.form-group
+        .col-lg-12.col-xs-12.input-blank
+          .icon-container
+            %input.form-control{:name => "email", :placeholder => "Email Address"}
+            %span.message{"data-error" => "email"}
+        .col-lg-12.col-xs-12.input-blank
+          .icon-container
+            %input.form-control{:name => "password", :placeholder => "Password", :type => "password"}
+            %span.message{"data-error" => "password"}
+          .subtext
+            %small{:style => "float:left;"}
+              Do not have account?
+              %a.register{:href => "javascript:void(0)"} Register with your SMU email
+              now!
+        .col-lg-12.col-xs-12.text-center
+          %span.generic.message{"data-error" => "generic"}
+          %button.btn.btn-primary.btn-block{:type => "submit"} Sign in

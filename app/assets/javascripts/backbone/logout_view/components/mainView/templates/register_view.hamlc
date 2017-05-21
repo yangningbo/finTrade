@@ -1,0 +1,27 @@
+.container
+  .row
+    .text-center
+      .section-title
+        %h1.heading.bold Register Now
+        %hr/
+    .register-info
+      %form.form-group
+        .col-lg-12.col-xs-12.input-blank
+          .icon-container
+            %input.form-control{:name => "name", :placeholder => "Name", :type => "text"}/
+            %span.message{"data-error" => "name"}
+        .col-lg-12.col-xs-12.input-blank
+          .icon-container
+            %input.form-control{:name => "email", :placeholder => "Email Address", :type => "text"}/
+            %span.message{"data-error" => "email"}
+        .col-lg-12.col-xs-12.input-blank
+          .icon-container
+            %input.form-control{:name => "password", :placeholder => "Password", :type => "password"}/
+            %span.message{"data-error" => "password"}
+        .col-lg-12.col-xs-12.input-blank
+          .icon-container
+            %input.form-control{:name => "confirm_password", :placeholder => "Confirm Password", :type => "password"}/
+            %span.message{"data-error" => "confirm_password"}
+        .col-lg-12.col-xs-12.text-center
+          %span.generic.message{"data-error" => "generic"}
+          %button.btn.btn-primary.btn-block{:type => "submit"} Register Now!

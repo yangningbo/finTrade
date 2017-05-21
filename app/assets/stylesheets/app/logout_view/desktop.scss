@@ -11,6 +11,7 @@ home section
 ========================================================================== */
 .home {
   background-size: cover;
+  position: static !important;
   background-position: center;
   color: #ffffff;
   display: -webkit-flex;
@@ -19,7 +20,7 @@ home section
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   text-align: center;
 }
 .home h1 {

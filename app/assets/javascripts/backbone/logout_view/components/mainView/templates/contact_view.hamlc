@@ -1,0 +1,20 @@
+.container
+  .row
+    .col-md-12.col-sm-12.text-center
+      .section-title
+        %h1.heading.bold CONTACT US
+        %hr/
+    .col-md-12.col-sm-12.contact-info
+      %h2.heading.bold We Need You!
+      %p
+        We need your helps. If you find any bugs in this application, or you have any suggestions, please contact William directly. Besides, if you are interested in website development, please join me to maintain this website.
+      .col-md-6.col-sm-4
+        %h3
+          %i.icon-envelope.medium-icon.wow.bounceIn{"data-wow-delay" => "0.6s"}
+          EMAIL
+        %p williamfeng323@gmail.com
+      .col-md-6.col-sm-4
+        %h3
+          %i.icon-phone.medium-icon.wow.bounceIn{"data-wow-delay" => "0.6s"}
+          PHONES
+        %p +65 84508744

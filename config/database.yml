@@ -80,7 +80,7 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-# finTrade323
+# FINTRADE_DATABASE_PASSWORD=finTrade323
 production:
   <<: *default
   database: fintrade_production

@@ -1,0 +1,8 @@
+%li{:class => "#{@isActive('home')}"}
+  %a.smoothScroll{:name => "home"} HOME
+%li{:class => "#{@isActive('work')}"}
+  %a.smoothScroll{:name => "work"} WORK
+%li{:class => "#{@isActive('contact')}"}
+  %a.smoothScroll{:name => "contact"} CONTACT
+%li{:class => "#{@isActive('login')}"}
+  %a.smoothScroll{:name => "login"} LOGIN
