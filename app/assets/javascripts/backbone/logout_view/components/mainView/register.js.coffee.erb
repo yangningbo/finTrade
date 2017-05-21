@@ -1,0 +1,31 @@
+@RegistryUI.module "LogoutView", (LogoutView, App, Backbone, Marionette, $, _) ->
+  class LogoutView.RegisterView extends Marionette.ItemView
+    template: 'mainView/register_view'
+    className: 'register'
+    ui:
+      'submitForm': '[type=submit]'
+      'registerForm': 'form.form-group'
+
+
+    events:
+      'click @ui.submitForm': 'createUser'
+
+    initialize: (options)->
+      _.extend @, options
+      @model.on 'invalid', @showErrors
+
+    createUser: (event)->
+      event.preventDefault()
+      @$el.find('.invalid').removeClass 'invalid'
+      @$el.find('.generic.message').html ''
+      @model.setCreateData(@ui.registerForm)
+      @model.save {},
+        success: (res)->
+          App.LogoutView.router.navigate "login", trigger:true
+        error: (res)=>
+          @$el.find('.generic.message').html 'Registration failed. Please contact us for your problem.'
+
+    showErrors: (model, errors)->
+      _.each errors,(error)->
+        @$("[name=#{error.type}]").addClass 'invalid'
+        @$("[data-error=#{error.type}]").show().html(error.message)

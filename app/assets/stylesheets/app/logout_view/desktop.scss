@@ -1,0 +1,178 @@
+html, body, main, section {
+  height:100%;
+  width: 100%;
+}
+#view-container {
+  padding-top: 65px;
+}
+
+/* ==========================================================================
+home section
+========================================================================== */
+.home {
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.home h1 {
+  font-size: 40px;
+}
+.home h3 {
+  font-size: 14px;
+}
+.home hr {
+  width: 240px;
+}
+.home .btn {
+  background: transparent;
+  border: 4px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 12px 42px;
+  margin-top: 40px;
+  margin-right: 16px;
+  transition: all 0.4s ease-in-out;
+}
+.home .btn:hover {
+  background: #00c6d7;
+  border-color: transparent;
+}
+.home .btn-danger {
+  background: #00c6d7;
+  border-color: transparent;
+}
+.home .btn-danger:hover {
+  border: 4px solid #ffffff;
+  border-radius: 0;
+  background: transparent;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+work section
+========================================================================== */
+.work {
+  text-align: center;
+}
+.work .col-md-4 {
+  padding: 28px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.work .col-md-4:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.20);
+}
+.work h3 {
+  font-size: 18px;
+}
+.work .icon-laptop{
+  background: url(image_path("icon-laptop.png")) no-repeat transparent;
+  width: 80px;
+  height: 50px;
+  margin: 0 auto;
+}
+.work .icon-chat{
+  background: url(image_path("icon-chat.png")) no-repeat transparent;
+  width: 80px;
+  height: 50px;
+  margin: 0 auto;
+}
+.work .icon-news{
+  background: url(image_path("icon-news.png")) no-repeat transparent;
+  width: 80px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+contact section
+========================================================================== */
+.contact {
+  background: #3B3B3B url(image_path('contact-bg.jpg')) no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
+  height:100%;
+  width: 100%;
+  .contact-info {
+    text-align: center;
+  }
+}
+.contact h2 {
+  padding-bottom: 20px;
+}
+.contact h3 {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.contact .medium-icon {
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.contact .contact-info div {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.contact form {
+  padding-top: 60px;
+}
+.contact .form-control {
+  border: 2px solid #ffffff;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.4s ease-in-out;
+}
+.contact input {
+  height: 40px;
+}
+.contact input[type="submit"] {
+  background: #00c6d7;
+  border: 3px solid #00c6d7;
+  letter-spacing: 1px;
+  margin-top: 18px;
+  height: 50px;
+  color: #ffffff;
+}
+.contact input[type="submit"]:hover {
+  color: #000000;
+}
+
+/* ==========================================================================
+Login section
+========================================================================== */
+.login {
+  .login-info {
+    width: 50%;
+    margin: 0 auto;
+    .input-blank {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+/* ==========================================================================
+Register section
+========================================================================== */
+.register {
+  .register-info {
+    width: 50%;
+    margin: 0 auto;
+    .input-blank {
+      padding-bottom: 30px;
+    }
+  }
+}

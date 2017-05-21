@@ -1,0 +1,28 @@
+@RegistryUI.module "LogoutView", (LogoutView, App, Backbone, Marionette, $, _) ->
+  class LogoutView.navbar extends Marionette.ItemView
+    template: 'navbar/navbar_view'
+    tag: 'ul'
+    className: 'nav navbar-nav navbar-right'
+    ui:
+      'navTag': '[name]'
+    events:
+      'click @ui.navTag': 'navigateTo'
+
+    templateHelpers: ->
+      isActive: (session)=>
+        if session == @controller?.currentSession
+          'active'
+        else
+          ''
+
+    initialize: (options)->
+      _.extend @, options
+
+    onRender: ->
+      if @controller?.currentSession == 'home'
+        $('.custom-navbar.top-nav-collapse').addClass 'transparent'
+      else
+        $('.custom-navbar.top-nav-collapse').removeClass 'transparent'
+
+    navigateTo: (e)->
+      App.LogoutView.router.navigate "#{$(e.currentTarget).attr('name')}", trigger:true

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Activities Registry</title>
+  <link rel="shortcut icon" href="http://www.smu.edu.sg/sites/all/themes/smu/images/smu_favicon.png" type="image/png">
+  <%= stylesheet_link_tag    @page_css, media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag @page_js, 'data-turbolinks-track' => true %>
+  <%= Gon::Base.render_data %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

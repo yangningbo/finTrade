@@ -1,0 +1,29 @@
+@RegistryUI.module "LogoutView", (LogoutView, App, Backbone, Marionette, $, _) ->
+  class LogoutView.View extends Marionette.ItemView
+    ui:
+      'navTag': 'a[name]'
+      'register': '.register'
+    events:
+      'click @ui.navTag': 'navigateTo'
+      'click @ui.register': 'registerAccount'
+
+    initialize: (options)->
+      _.extend @, options
+      @template =  "mainView/#{@options.status}_view"
+      @$el.attr class:@options.status
+
+    onRender: ->
+      if @controller?.currentSession == 'home'
+        @showBackground()
+      else
+        @$el.backstretch(["<%=asset_path('contact-bg.jpg')%>"]) if @controller?.currentSession == 'contact'
+
+    showBackground: ->
+      @$el.backstretch ["<%=asset_path('home-bg-slideshow1.jpg')%>","<%=asset_path('home-bg-slideshow2.jpg')%>"],
+        {duration: 2000, fade: 750}
+
+    navigateTo: (e)->
+      App.LogoutView.router.navigate "#{$(e.currentTarget).attr('name')}", trigger:true
+
+    registerAccount: ->
+      App.LogoutView.router.navigate "user/register", trigger:true

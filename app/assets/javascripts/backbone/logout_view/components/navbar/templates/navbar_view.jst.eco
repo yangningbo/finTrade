@@ -1,0 +1,12 @@
+<li class=<%= @isActive('home') %>>
+  <a class="smoothScroll" name="home">HOME</a>
+</li>
+<li class=<%= @isActive('work') %>>
+  <a class="smoothScroll"  name="work">WORK</a>
+</li>
+<li class=<%= @isActive('contact') %>>
+  <a class="smoothScroll" name="contact">CONTACT</a>
+</li>
+<li class=<%= @isActive('login') %>>
+  <a class="smoothScroll" name="login">LOGIN</a>
+</li>

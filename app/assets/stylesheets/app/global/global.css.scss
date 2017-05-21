@@ -1,0 +1,23 @@
+.message {
+  display: none;
+}
+.transparent {
+ background: transparent !important;
+}
+.backstretch {
+  height:100% !important;
+}
+.form-control.invalid + .message {
+  font-size:12px;
+  color: #FF0000;
+  display: block;
+}
+.generic.message{
+  font-weight: 400;
+  font-style: normal;
+  font-size:12px;
+  color: #FF0000;
+  display:block;
+  text-align: left;
+  padding-bottom: 10px;
+}
